@@ -1,0 +1,34 @@
+{
+    "side": [
+        {
+            "type": "T",
+            "title": "科技"
+        },
+        {
+            "type": "L",
+            "title": "生活"
+        }
+    ],
+    "L": [
+        {
+            "title": "第一张",
+            "link": "",
+            "createDate": "",
+            "keywords": []
+        },
+        {
+            "title": "第一张",
+            "link": "",
+            "createDate": "",
+            "keywords": []
+        }
+    ],
+    "T":[
+        {
+            "title": "第一张",
+            "link": "",
+            "createDate": "",
+            "keywords": []
+        }
+    ]
+}
