@@ -25,8 +25,8 @@
     ],
     "T":[
         {
-            "title": "认知管理",
-            "link": "https://127.0.0.1:80/README.md",
+            "title": "学习transformers是怎么回事",
+            "link": "https://github.proxy.class3.fun/https://raw.githubusercontent.com/huggingface/transformers/refs/heads/main/i18n/README_zh-hans.md",
             "createDate": "",
             "keywords": []
         }
