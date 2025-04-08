@@ -25,8 +25,8 @@
     ],
     "T":[
         {
-            "title": "第一张",
-            "link": "",
+            "title": "学习transfomers是怎么回事",
+            "link": "https://raw.githubusercontent.com/huggingface/transformers/refs/heads/main/i18n/README_zh-hans.md",
             "createDate": "",
             "keywords": []
         }
