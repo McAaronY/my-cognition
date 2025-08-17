@@ -12,7 +12,7 @@
     "L": [
         {
             "title": "简历CN",
-            "link": "https://yyl202248.ch.eu.org/McAaronY/my-cognition/refs/heads/main/software/简历-CN.md",
+            "link": "/McAaronY/my-cognition/refs/heads/main/software/简历-CN.md",
             "createDate": "",
             "keywords": []
         }
@@ -20,13 +20,13 @@
     "T": [
         {
             "title": "学习transformers是怎么回事",
-            "link": "https://yyl202248.ch.eu.org/McAaronY/huggingface/transformers/refs/heads/main/i18n/README_zh-hans.md",
+            "link": "/githubraw/huggingface/transformers/refs/heads/main/i18n/README_zh-hans.md",
             "createDate": "",
             "keywords": []
         },
         {
             "title": "Mackbook brew 使用",
-            "link": "https://yyl202248.ch.eu.org/McAaronY/McAaronY/my-cognition/refs/heads/main/software/brew.md",
+            "link": "/McAaronY/McAaronY/my-cognition/refs/heads/main/software/brew.md",
             "createDate": "",
             "keywords": []
         }
