@@ -35,6 +35,12 @@
             "link": "/McAaronY/my-cognition/refs/heads/main/software/vim.md",
             "createDate": "2025-08-17",
             "keywords": []
+        },
+        {
+            "title": "go",
+            "link": "/McAaronY/my-cognition/refs/heads/main/software/go.md",
+            "createDate": "2025-08-26",
+            "keywords": []
         }
     ]
 }
