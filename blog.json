@@ -50,6 +50,18 @@
             "keywords": [],
             "creator": "xiaoyang",
             "img": "/McAaronY/my-cognition/refs/heads/main/images/go.jpeg"
+        },
+        {
+            "title": "go gin docker构建本地环境",
+            "link": "/McAaronY/my-cognition/refs/heads/main/software/go-gin-docker.md",
+            "createDate": "2025-09-09",
+            "keywords": [
+                "go",
+                "gin",
+                "docker"
+            ],
+            "creator": "xiaoyang",
+            "img": "/McAaronY/my-cognition/refs/heads/main/images/go.jpeg"
         }
     ]
 }
