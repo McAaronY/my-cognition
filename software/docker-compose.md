@@ -25,15 +25,15 @@ Docker Compose 是 Docker 官方推出的**多容器编排工具**，通过一�
 #### 方式 1：通过 Docker 官方脚本安装（推荐）
 
 ```
-\# 下载 Docker Compose 二进制文件（适用于 x86\_64 架构，其他架构需替换 URL 中的架构标识）
+# 下载 Docker Compose 二进制文件（适用于 x86\_64 架构，其他架构需替换 URL 中的架构标识）
 
 sudo curl -L "https://github.com/docker/compose/releases/latest/download/docker-compose-\$(uname -s)-\$(uname -m)" -o /usr/local/bin/docker-compose
 
-\# 赋予执行权限
+# 赋予执行权限
 
 sudo chmod +x /usr/local/bin/docker-compose
 
-\# 验证安装（输出版本号即成功）
+# 验证安装（输出版本号即成功）
 
 docker-compose --version
 ```
@@ -67,163 +67,163 @@ pip install docker-compose
 ### 2. 核心字段详解（以 “Flask + MySQL + Redis” 应用为例）
 
 ```
-\# 1. 版本声明（兼容 Docker 19.03.0+）
+# 1. 版本声明（兼容 Docker 19.03.0+）
 
 version: "3.8"
 
-\# 2. 服务定义（每个服务对应一个容器）
+# 2. 服务定义（每个服务对应一个容器）
 
 services:
 
-&#x20; \# 服务 1：Flask Web 应用
+ # 服务 1：Flask Web 应用
 
-&#x20; web:
+ web:
 
-&#x20;   \# 构建镜像（两种方式：1. 基于 Dockerfile 构建；2. 直接使用已有镜像）
+   # 构建镜像（两种方式：1. 基于 Dockerfile 构建；2. 直接使用已有镜像）
 
-&#x20;   build: ./web  # 表示从 ./web 目录下的 Dockerfile 构建镜像
+   build: ./web  # 表示从 ./web 目录下的 Dockerfile 构建镜像
 
-&#x20;   \# image: python:3.11-slim  # 若无需构建，直接指定已有镜像（与 build 二选一）
+   # image: python:3.11-slim  # 若无需构建，直接指定已有镜像（与 build 二选一）
 
-&#x20;  &#x20;
 
-&#x20;   \# 容器名称（自定义，避免自动生成随机名称）
 
-&#x20;   container\_name: flask-web
+   # 容器名称（自定义，避免自动生成随机名称）
 
-&#x20;  &#x20;
+   container\_name: flask-web
 
-&#x20;   \# 端口映射（宿主机端口:容器端口）
 
-&#x20;   ports:
 
-&#x20;     \- "8080:5000"  # 宿主机 8080 端口映射到容器 5000 端口（Flask 默认端口）
+   # 端口映射（宿主机端口:容器端口）
 
-&#x20;  &#x20;
+   ports:
 
-&#x20;   \# 环境变量（两种方式：1. 直接指定；2. 从文件读取）
+     \- "8080:5000"  # 宿主机 8080 端口映射到容器 5000 端口（Flask 默认端口）
 
-&#x20;   environment:
 
-&#x20;     \- FLASK\_ENV=production  # 直接指定环境变量
 
-&#x20;     \- DB\_HOST=db  # 数据库服务名（容器间可通过服务名访问，无需 IP）
+   # 环境变量（两种方式：1. 直接指定；2. 从文件读取）
 
-&#x20;   env\_file:
+   environment:
 
-&#x20;     \- ./web/.env  # 从文件读取环境变量（文件格式：KEY=VALUE）
+     \- FLASK\_ENV=production  # 直接指定环境变量
 
-&#x20;  &#x20;
+     \- DB\_HOST=db  # 数据库服务名（容器间可通过服务名访问，无需 IP）
 
-&#x20;   \# 依赖服务（启动顺序：先启动 db 和 redis，再启动 web）
+   env\_file:
 
-&#x20;   depends\_on:
+     \- ./web/.env  # 从文件读取环境变量（文件格式：KEY=VALUE）
 
-&#x20;     \- db
 
-&#x20;     \- redis
 
-&#x20;  &#x20;
+   # 依赖服务（启动顺序：先启动 db 和 redis，再启动 web）
 
-&#x20;   \# 挂载数据卷（宿主机目录/数据卷:容器目录，实现数据持久化）
+   depends\_on:
 
-&#x20;   volumes:
+     \- db
 
-&#x20;     \- ./web/app:/app  # 宿主机 ./web/app 目录挂载到容器 /app（代码实时同步，开发环境常用）
+     \- redis
 
-&#x20;     \- web-logs:/app/logs  # 挂载自定义数据卷 web-logs 到容器 /app/logs（持久化日志）
 
-&#x20;  &#x20;
 
-&#x20;   \# 加入自定义网络（实现服务间通信）
+   # 挂载数据卷（宿主机目录/数据卷:容器目录，实现数据持久化）
 
-&#x20;   networks:
+   volumes:
 
-&#x20;     \- app-network
+     \- ./web/app:/app  # 宿主机 ./web/app 目录挂载到容器 /app（代码实时同步，开发环境常用）
 
-&#x20; \# 服务 2：MySQL 数据库
+     \- web-logs:/app/logs  # 挂载自定义数据卷 web-logs 到容器 /app/logs（持久化日志）
 
-&#x20; db:
 
-&#x20;   \# 使用官方 MySQL 镜像
 
-&#x20;   image: mysql:8.0
+   # 加入自定义网络（实现服务间通信）
 
-&#x20;   container\_name: mysql-db
+   networks:
 
-&#x20;  &#x20;
+     \- app-network
 
-&#x20;   \# 端口映射（可选，生产环境建议不暴露端口，仅内部通信）
+ # 服务 2：MySQL 数据库
 
-&#x20;   ports:
+ db:
 
-&#x20;     \- "3306:3306"
+   # 使用官方 MySQL 镜像
 
-&#x20;  &#x20;
+   image: mysql:8.0
 
-&#x20;   \# 环境变量（MySQL 必要配置：root 密码、数据库名、编码）
+   container\_name: mysql-db
 
-&#x20;   environment:
 
-&#x20;     \- MYSQL\_ROOT\_PASSWORD=root123
 
-&#x20;     \- MYSQL\_DATABASE=flask\_db
+   # 端口映射（可选，生产环境建议不暴露端口，仅内部通信）
 
-&#x20;     \- MYSQL\_CHARSET=utf8mb4
+   ports:
 
-&#x20;  &#x20;
+     \- "3306:3306"
 
-&#x20;   \# 数据卷挂载（持久化 MySQL 数据，避免容器删除后数据丢失）
 
-&#x20;   volumes:
 
-&#x20;     \- mysql-data:/var/lib/mysql  # 自定义数据卷 mysql-data 挂载到 MySQL 数据目录
+   # 环境变量（MySQL 必要配置：root 密码、数据库名、编码）
 
-&#x20;     \- ./db/init.sql:/docker-entrypoint-initdb.d/init.sql  # 初始化 SQL 脚本（容器启动时自动执行）
+   environment:
 
-&#x20;  &#x20;
+     \- MYSQL\_ROOT\_PASSWORD=root123
 
-&#x20;   networks:
+     \- MYSQL\_DATABASE=flask\_db
 
-&#x20;     \- app-network
+     \- MYSQL\_CHARSET=utf8mb4
 
-&#x20; \# 服务 3：Redis 缓存
 
-&#x20; redis:
 
-&#x20;   image: redis:7.0
+   # 数据卷挂载（持久化 MySQL 数据，避免容器删除后数据丢失）
 
-&#x20;   container\_name: redis-cache
+   volumes:
 
-&#x20;   ports:
+     \- mysql-data:/var/lib/mysql  # 自定义数据卷 mysql-data 挂载到 MySQL 数据目录
 
-&#x20;     \- "6379:6379"
+     \- ./db/init.sql:/docker-entrypoint-initdb.d/init.sql  # 初始化 SQL 脚本（容器启动时自动执行）
 
-&#x20;   volumes:
 
-&#x20;     \- redis-data:/data  # Redis 数据持久化目录
 
-&#x20;   networks:
+   networks:
 
-&#x20;     \- app-network
+     \- app-network
 
-\# 3. 自定义网络（默认会创建一个名为 "项目名\_default" 的网络，自定义网络更灵活）
+ # 服务 3：Redis 缓存
+
+ redis:
+
+   image: redis:7.0
+
+   container\_name: redis-cache
+
+   ports:
+
+     \- "6379:6379"
+
+   volumes:
+
+     \- redis-data:/data  # Redis 数据持久化目录
+
+   networks:
+
+     \- app-network
+
+# 3. 自定义网络（默认会创建一个名为 "项目名\_default" 的网络，自定义网络更灵活）
 
 networks:
 
-&#x20; app-network:
+ app-network:
 
-&#x20;   driver: bridge  # 网络驱动类型（默认 bridge，适用于单机容器通信）
+   driver: bridge  # 网络驱动类型（默认 bridge，适用于单机容器通信）
 
-\# 4. 自定义数据卷（全局数据卷，可被多个服务挂载）
+# 4. 自定义数据卷（全局数据卷，可被多个服务挂载）
 
 volumes:
 
-&#x20; web-logs:  # 日志数据卷
+ web-logs:  # 日志数据卷
 
-&#x20; mysql-data:  # MySQL 数据卷
+ mysql-data:  # MySQL 数据卷
 
-&#x20; redis-data:  # Redis 数据卷
+ redis-data:  # Redis 数据卷
 ```
 
 ### 3. 关键字段说明
@@ -247,15 +247,15 @@ volumes:
 ### 1. 启动服务（默认前台运行，加 `-d` 后台运行）
 
 ```
-\# 后台启动所有服务（推荐，容器在后台运行，不占用终端）
+# 后台启动所有服务（推荐，容器在后台运行，不占用终端）
 
 docker-compose up -d
 
-\# 前台启动（实时输出容器日志，按 Ctrl+C 停止服务）
+# 前台启动（实时输出容器日志，按 Ctrl+C 停止服务）
 
 docker-compose up
 
-\# 启动时重新构建镜像（适用于 Dockerfile 或代码修改后）
+# 启动时重新构建镜像（适用于 Dockerfile 或代码修改后）
 
 docker-compose up -d --build
 ```
@@ -263,15 +263,15 @@ docker-compose up -d --build
 ### 2. 停止并删除服务（容器、网络会被删除，数据卷默认保留）
 
 ```
-\# 停止服务并删除容器、网络（数据卷不删除）
+# 停止服务并删除容器、网络（数据卷不删除）
 
 docker-compose down
 
-\# 停止服务并删除容器、网络、数据卷（谨慎使用，数据会丢失）
+# 停止服务并删除容器、网络、数据卷（谨慎使用，数据会丢失）
 
 docker-compose down -v
 
-\# 停止服务并删除容器、网络、镜像（删除通过 build 构建的镜像）
+# 停止服务并删除容器、网络、镜像（删除通过 build 构建的镜像）
 
 docker-compose down --rmi all
 ```
@@ -279,11 +279,11 @@ docker-compose down --rmi all
 ### 3. 查看服务状态
 
 ```
-\# 查看所有服务的运行状态（Up 表示运行中，Exited 表示已停止）
+# 查看所有服务的运行状态（Up 表示运行中，Exited 表示已停止）
 
 docker-compose ps
 
-\# 查看指定服务的状态（如查看 web 服务）
+# 查看指定服务的状态（如查看 web 服务）
 
 docker-compose ps web
 ```
@@ -291,19 +291,19 @@ docker-compose ps web
 ### 4. 查看容器日志
 
 ```
-\# 查看所有服务的日志（实时输出，按 Ctrl+C 退出）
+# 查看所有服务的日志（实时输出，按 Ctrl+C 退出）
 
 docker-compose logs
 
-\# 查看指定服务的日志（如查看 web 服务）
+# 查看指定服务的日志（如查看 web 服务）
 
 docker-compose logs web
 
-\# 实时跟踪日志（加 -f 参数，类似 tail -f）
+# 实时跟踪日志（加 -f 参数，类似 tail -f）
 
 docker-compose logs -f web
 
-\# 查看最近 10 行日志并实时跟踪
+# 查看最近 10 行日志并实时跟踪
 
 docker-compose logs -f --tail=10 web
 ```
@@ -311,19 +311,19 @@ docker-compose logs -f --tail=10 web
 ### 5. 启动 / 停止 / 重启指定服务
 
 ```
-\# 启动指定服务（如启动 db 服务）
+# 启动指定服务（如启动 db 服务）
 
 docker-compose start db
 
-\# 停止指定服务
+# 停止指定服务
 
 docker-compose stop db
 
-\# 重启指定服务
+# 重启指定服务
 
 docker-compose restart db
 
-\# 强制停止指定服务（类似 kill 命令）
+# 强制停止指定服务（类似 kill 命令）
 
 docker-compose kill db
 ```
@@ -331,11 +331,11 @@ docker-compose kill db
 ### 6. 查看数据卷和网络
 
 ```
-\# 查看 Compose 管理的数据卷
+# 查看 Compose 管理的数据卷
 
 docker-compose volume ls
 
-\# 查看 Compose 管理的网络
+# 查看 Compose 管理的网络
 
 docker-compose network ls
 ```
@@ -359,77 +359,77 @@ version: "3.8"
 
 services:
 
-&#x20; # Wordpress 服务
+ # Wordpress 服务
 
-&#x20; wordpress:
+ wordpress:
 
-&#x20;   image: wordpress:latest
+   image: wordpress:latest
 
-&#x20;   container\_name: wordpress
+   container\_name: wordpress
 
-&#x20;   ports:
+   ports:
 
-&#x20;     - "80:80"  # 宿主机 80 端口映射到 Wordpress 80 端口（浏览器直接访问宿主机 IP 即可）
+     - "80:80"  # 宿主机 80 端口映射到 Wordpress 80 端口（浏览器直接访问宿主机 IP 即可）
 
-&#x20;   environment:
+   environment:
 
-&#x20;     - WORDPRESS\_DB\_HOST=mysql  # 数据库服务名（无需 IP）
+     - WORDPRESS\_DB\_HOST=mysql  # 数据库服务名（无需 IP）
 
-&#x20;     - WORDPRESS\_DB\_USER=root   # 数据库用户名
+     - WORDPRESS\_DB\_USER=root   # 数据库用户名
 
-&#x20;     - WORDPRESS\_DB\_PASSWORD=root123  # 数据库密码（需与 MySQL 配置一致）
+     - WORDPRESS\_DB\_PASSWORD=root123  # 数据库密码（需与 MySQL 配置一致）
 
-&#x20;     - WORDPRESS\_DB\_NAME=wordpress\_db  # 数据库名
+     - WORDPRESS\_DB\_NAME=wordpress\_db  # 数据库名
 
-&#x20;   depends\_on:
+   depends\_on:
 
-&#x20;     - mysql  # 依赖 MySQL 服务
+     - mysql  # 依赖 MySQL 服务
 
-&#x20;   volumes:
+   volumes:
 
-&#x20;     - wordpress-data:/var/www/html  # 持久化 Wordpress 数据（主题、插件、上传文件）
+     - wordpress-data:/var/www/html  # 持久化 Wordpress 数据（主题、插件、上传文件）
 
-&#x20;   networks:
+   networks:
 
-&#x20;     - wp-network
+     - wp-network
 
-&#x20; # MySQL 服务
+ # MySQL 服务
 
-&#x20; mysql:
+ mysql:
 
-&#x20;   image: mysql:8.0
+   image: mysql:8.0
 
-&#x20;   container\_name: wp-mysql
+   container\_name: wp-mysql
 
-&#x20;   environment:
+   environment:
 
-&#x20;     - MYSQL\_ROOT\_PASSWORD=root123  # 与 Wordpress 配置的密码一致
+     - MYSQL\_ROOT\_PASSWORD=root123  # 与 Wordpress 配置的密码一致
 
-&#x20;     - MYSQL\_DATABASE=wordpress\_db  # 与 Wordpress 配置的数据库名一致
+     - MYSQL\_DATABASE=wordpress\_db  # 与 Wordpress 配置的数据库名一致
 
-&#x20;   volumes:
+   volumes:
 
-&#x20;     - mysql-data:/var/lib/mysql  # 持久化 MySQL 数据
+     - mysql-data:/var/lib/mysql  # 持久化 MySQL 数据
 
-&#x20;   networks:
+   networks:
 
-&#x20;     - wp-network
+     - wp-network
 
-\# 自定义网络
+# 自定义网络
 
 networks:
 
-&#x20; wp-network:
+ wp-network:
 
-&#x20;   driver: bridge
+   driver: bridge
 
-\# 数据卷
+# 数据卷
 
 volumes:
 
-&#x20; wordpress-data:
+ wordpress-data:
 
-&#x20; mysql-data:
+ mysql-data:
 ```
 
 ### 3. 部署步骤
@@ -507,19 +507,17 @@ volumes:
 ```
 services:
 
-&#x20; db:
+ db:
 
-&#x20;   image: mysql:8.0
+   image: mysql:8.0
 
-&#x20;   healthcheck:
+   healthcheck:
 
-&#x20;     test: \["CMD", "mysqladmin", "ping", "-h", "localhost", "-uroot", "-proot123"]
+     test: \["CMD", "mysqladmin", "ping", "-h", "localhost", "-uroot", "-proot123"]
 
-&#x20;     interval: 10s  # 每 10 秒检查一次
+     interval: 10s  # 每 10 秒检查一次
 
-&#x20;     timeout: 5s    # 检查超时时间
+     timeout: 5s    # 检查超时时间
 
-&#x20;     retries: 5     # 重试 5 次失败后，标记服务不健康
+     retries: 5     # 重试 5 次失败后，标记服务不健康
 ```
-
-> （注：文档部分内容可能由 AI 生成）

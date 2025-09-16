@@ -19,15 +19,15 @@ import java.util.List;
 
 public class LambdaExample {
 
-&#x20;   public static void main(String\[] args) {
+   public static void main(String\[] args) {
 
-&#x20;       List\<Integer> numbers = Arrays.asList(3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5);
+       List\<Integer> numbers = Arrays.asList(3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5);
 
-&#x20;       numbers.sort((a, b) -> a - b);
+       numbers.sort((a, b) -> a - b);
 
-&#x20;       System.out.println(numbers);
+       System.out.println(numbers);
 
-&#x20;   }
+   }
 
 }
 ```
@@ -47,21 +47,21 @@ import java.util.stream.Collectors;
 
 public class StreamExample {
 
-&#x20;   public static void main(String\[] args) {
+   public static void main(String\[] args) {
 
-&#x20;       List\<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+       List\<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
 
-&#x20;       int sumOfSquares = numbers.stream()
+       int sumOfSquares = numbers.stream()
 
-&#x20;              .filter(n -> n % 2 == 0)
+              .filter(n -> n % 2 == 0)
 
-&#x20;              .mapToInt(n -> n \* n)
+              .mapToInt(n -> n \* n)
 
-&#x20;              .sum();
+              .sum();
 
-&#x20;       System.out.println(sumOfSquares);
+       System.out.println(sumOfSquares);
 
-&#x20;   }
+   }
 
 }
 ```
@@ -75,17 +75,17 @@ public class StreamExample {
 ```
 interface MyInterface {
 
-&#x20;   default void sayHello() {
+   default void sayHello() {
 
-&#x20;       System.out.println("Hello from MyInterface");
+       System.out.println("Hello from MyInterface");
 
-&#x20;   }
+   }
 
 }
 
 class MyClass implements MyInterface {
 
-&#x20;   // 无需实现sayHello方法，可直接使用接口的默认实现
+   // 无需实现sayHello方法，可直接使用接口的默认实现
 
 }
 ```
@@ -101,7 +101,7 @@ class MyClass implements MyInterface {
 ```
 module mymodule {
 
-&#x20;   exports com.example.mypackage;
+   exports com.example.mypackage;
 
 }
 ```
@@ -115,15 +115,15 @@ import java.util.List;
 
 public class ImmutableListExample {
 
-&#x20;   public static void main(String\[] args) {
+   public static void main(String\[] args) {
 
-&#x20;       List\<String> names = List.of("Alice", "Bob", "Charlie");
+       List\<String> names = List.of("Alice", "Bob", "Charlie");
 
-&#x20;       // names.add("David"); // 这行代码会抛出UnsupportedOperationException异常
+       // names.add("David"); // 这行代码会抛出UnsupportedOperationException异常
 
-&#x20;       System.out.println(names);
+       System.out.println(names);
 
-&#x20;   }
+   }
 
 }
 ```
@@ -137,13 +137,13 @@ public class ImmutableListExample {
 ```
 public class VarExample {
 
-&#x20;   public static void main(String\[] args) {
+   public static void main(String\[] args) {
 
-&#x20;       var message = "Hello, Java 10";
+       var message = "Hello, Java 10";
 
-&#x20;       System.out.println(message);
+       System.out.println(message);
 
-&#x20;   }
+   }
 
 }
 ```
@@ -161,17 +161,17 @@ public class VarExample {
 ```
 public class StringEnhancementExample {
 
-&#x20;   public static void main(String\[] args) {
+   public static void main(String\[] args) {
 
-&#x20;       String str1 = "   ";
+       String str1 = "   ";
 
-&#x20;       String str2 = "Hello";
+       String str2 = "Hello";
 
-&#x20;       System.out.println(str1.isBlank()); // true
+       System.out.println(str1.isBlank()); // true
 
-&#x20;       System.out.println(str2.isBlank()); // false
+       System.out.println(str2.isBlank()); // false
 
-&#x20;   }
+   }
 
 }
 ```
@@ -193,21 +193,21 @@ import java.net.http.HttpResponse;
 
 public class HttpClientExample {
 
-&#x20;   public static void main(String\[] args) throws IOException, InterruptedException {
+   public static void main(String\[] args) throws IOException, InterruptedException {
 
-&#x20;       HttpClient client = HttpClient.newHttpClient();
+       HttpClient client = HttpClient.newHttpClient();
 
-&#x20;       HttpRequest request = HttpRequest.newBuilder()
+       HttpRequest request = HttpRequest.newBuilder()
 
-&#x20;              .uri(URI.create("https://example.com"))
+              .uri(URI.create("https://example.com"))
 
-&#x20;              .build();
+              .build();
 
-&#x20;       HttpResponse\<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+       HttpResponse\<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
 
-&#x20;       System.out.println(response.body());
+       System.out.println(response.body());
 
-&#x20;   }
+   }
 
 }
 ```
@@ -221,25 +221,25 @@ public class HttpClientExample {
 ```
 public class SwitchExpressionExample {
 
-&#x20;   public static void main(String\[] args) {
+   public static void main(String\[] args) {
 
-&#x20;       int dayOfWeek = 3;
+       int dayOfWeek = 3;
 
-&#x20;       String dayName = switch (dayOfWeek) {
+       String dayName = switch (dayOfWeek) {
 
-&#x20;           case 1 -> "Monday";
+           case 1 -> "Monday";
 
-&#x20;           case 2 -> "Tuesday";
+           case 2 -> "Tuesday";
 
-&#x20;           case 3 -> "Wednesday";
+           case 3 -> "Wednesday";
 
-&#x20;           default -> "Unknown";
+           default -> "Unknown";
 
-&#x20;       };
+       };
 
-&#x20;       System.out.println(dayName);
+       System.out.println(dayName);
 
-&#x20;   }
+   }
 
 }
 ```
@@ -253,25 +253,25 @@ public class SwitchExpressionExample {
 ```
 public class TextBlockExample {
 
-&#x20;   public static void main(String\[] args) {
+   public static void main(String\[] args) {
 
-&#x20;       String html = """
+       String html = """
 
-&#x20;                     \<html>
+                     \<html>
 
-&#x20;                         \<body>
+                         \<body>
 
-&#x20;                             \<p>Hello, Java 13\</p>
+                             \<p>Hello, Java 13\</p>
 
-&#x20;                         \</body>
+                         \</body>
 
-&#x20;                     \</html>
+                     \</html>
 
-&#x20;                     """;
+                     """;
 
-&#x20;       System.out.println(html);
+       System.out.println(html);
 
-&#x20;   }
+   }
 
 }
 ```
@@ -285,17 +285,17 @@ public class TextBlockExample {
 ```
 public class InstanceOfPatternMatchingExample {
 
-&#x20;   public static void main(String\[] args) {
+   public static void main(String\[] args) {
 
-&#x20;       Object obj = "Hello";
+       Object obj = "Hello";
 
-&#x20;       if (obj instanceof String s) {
+       if (obj instanceof String s) {
 
-&#x20;           System.out.println(s.length());
+           System.out.println(s.length());
 
-&#x20;       }
+       }
 
-&#x20;   }
+   }
 
 }
 ```
@@ -345,67 +345,67 @@ public sealed class Shape permits Circle, Rectangle {
 
 final class Circle extends Shape {
 
-&#x20;   private final double radius;
+   private final double radius;
 
-&#x20;   public Circle(double radius) {
+   public Circle(double radius) {
 
-&#x20;       this.radius = radius;
+       this.radius = radius;
 
-&#x20;   }
+   }
 
-&#x20;   public double getRadius() {
+   public double getRadius() {
 
-&#x20;       return radius;
+       return radius;
 
-&#x20;   }
+   }
 
 }
 
 final class Rectangle extends Shape {
 
-&#x20;   private final double width;
+   private final double width;
 
-&#x20;   private final double height;
+   private final double height;
 
-&#x20;   public Rectangle(double width, double height) {
+   public Rectangle(double width, double height) {
 
-&#x20;       this.width = width;
+       this.width = width;
 
-&#x20;       this.height = height;
+       this.height = height;
 
-&#x20;   }
+   }
 
-&#x20;   public double getWidth() {
+   public double getWidth() {
 
-&#x20;       return width;
+       return width;
 
-&#x20;   }
+   }
 
-&#x20;   public double getHeight() {
+   public double getHeight() {
 
-&#x20;       return height;
+       return height;
 
-&#x20;   }
+   }
 
 }
 
 public class SwitchPatternMatchingShapeExample {
 
-&#x20;   public static void main(String\[] args) {
+   public static void main(String\[] args) {
 
-&#x20;       Shape shape = new Circle(5.0);
+       Shape shape = new Circle(5.0);
 
-&#x20;       double area = switch (shape) {
+       double area = switch (shape) {
 
-&#x20;           case Circle c -> Math.PI \* c.getRadius() \* c.getRadius();
+           case Circle c -> Math.PI \* c.getRadius() \* c.getRadius();
 
-&#x20;           case Rectangle r -> r.getWidth() \* r.getHeight();
+           case Rectangle r -> r.getWidth() \* r.getHeight();
 
-&#x20;       };
+       };
 
-&#x20;       System.out.println(area);
+       System.out.println(area);
 
-&#x20;   }
+   }
 
 }
 ```
@@ -437,37 +437,37 @@ import java.net.InetSocketAddress;
 
 public class SimpleWebServerExample {
 
-&#x20;   public static void main(String\[] args) throws IOException {
+   public static void main(String\[] args) throws IOException {
 
-&#x20;       HttpServer server = HttpServer.create(new InetSocketAddress(8000), 0);
+       HttpServer server = HttpServer.create(new InetSocketAddress(8000), 0);
 
-&#x20;       server.createContext("/", new MyHandler());
+       server.createContext("/", new MyHandler());
 
-&#x20;       server.start();
+       server.start();
 
-&#x20;       System.out.println("Server started on port 8000");
+       System.out.println("Server started on port 8000");
 
-&#x20;   }
+   }
 
-&#x20;   static class MyHandler implements HttpHandler {
+   static class MyHandler implements HttpHandler {
 
-&#x20;       @Override
+       @Override
 
-&#x20;       public void handle(HttpExchange exchange) throws IOException {
+       public void handle(HttpExchange exchange) throws IOException {
 
-&#x20;           String response = "Hello, from Java 18 Simple Web Server!";
+           String response = "Hello, from Java 18 Simple Web Server!";
 
-&#x20;           exchange.sendResponseHeaders(200, response.length());
+           exchange.sendResponseHeaders(200, response.length());
 
-&#x20;           OutputStream os = exchange.getResponseBody();
+           OutputStream os = exchange.getResponseBody();
 
-&#x20;           os.write(response.getBytes());
+           os.write(response.getBytes());
 
-&#x20;           os.close();
+           os.close();
 
-&#x20;       }
+       }
 
-&#x20;   }
+   }
 
 }
 ```
@@ -491,19 +491,19 @@ public class SimpleWebServerExample {
 ```
 public class StringTemplateExample {
 
-&#x20;   public static void main(String\[] args) {
+   public static void main(String\[] args) {
 
-&#x20;       int num = 10;
+       int num = 10;
 
-&#x20;       String result = """
+       String result = """
 
-&#x20;                     The number is \${num}, and its square is \${num \* num}
+                     The number is \${num}, and its square is \${num \* num}
 
-&#x20;                     """;
+                     """;
 
-&#x20;       System.out.println(result);
+       System.out.println(result);
 
-&#x20;   }
+   }
 
 }
 ```
@@ -521,5 +521,3 @@ public class StringTemplateExample {
 ## 五、总结
 
 从 Java 8 到 Java 23，Java 语言在语法、性能、库以及编程模型等多个方面都发生了重大变化。这些变化旨在提升开发人员的生产力，增强 Java 在不同领域的竞争力，如大数据处理、并发编程、与外部系统交互等。开发者应根据项目需求和自身技术栈，适时采用新特性，以充分发挥 Java 的优势，构建出更为高效、可靠的应用程序。
-
-> （注：文档部分内容可能由 AI 生成）
