@@ -19,9 +19,9 @@ import java.util.List;
 
 public class LambdaExample {
 
-   public static void main(String\[] args) {
+   public static void main(String[] args) {
 
-       List\<Integer> numbers = Arrays.asList(3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5);
+       List<Integer> numbers = Arrays.asList(3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5);
 
        numbers.sort((a, b) -> a - b);
 
@@ -47,15 +47,15 @@ import java.util.stream.Collectors;
 
 public class StreamExample {
 
-   public static void main(String\[] args) {
+   public static void main(String[] args) {
 
-       List\<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+       List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
 
        int sumOfSquares = numbers.stream()
 
               .filter(n -> n % 2 == 0)
 
-              .mapToInt(n -> n \* n)
+              .mapToInt(n -> n * n)
 
               .sum();
 
@@ -115,9 +115,9 @@ import java.util.List;
 
 public class ImmutableListExample {
 
-   public static void main(String\[] args) {
+   public static void main(String[] args) {
 
-       List\<String> names = List.of("Alice", "Bob", "Charlie");
+       List<String> names = List.of("Alice", "Bob", "Charlie");
 
        // names.add("David"); // 这行代码会抛出UnsupportedOperationException异常
 
@@ -137,7 +137,7 @@ public class ImmutableListExample {
 ```
 public class VarExample {
 
-   public static void main(String\[] args) {
+   public static void main(String[] args) {
 
        var message = "Hello, Java 10";
 
@@ -161,7 +161,7 @@ public class VarExample {
 ```
 public class StringEnhancementExample {
 
-   public static void main(String\[] args) {
+   public static void main(String[] args) {
 
        String str1 = "   ";
 
@@ -193,7 +193,7 @@ import java.net.http.HttpResponse;
 
 public class HttpClientExample {
 
-   public static void main(String\[] args) throws IOException, InterruptedException {
+   public static void main(String[] args) throws IOException, InterruptedException {
 
        HttpClient client = HttpClient.newHttpClient();
 
@@ -203,7 +203,7 @@ public class HttpClientExample {
 
               .build();
 
-       HttpResponse\<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+       HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
 
        System.out.println(response.body());
 
@@ -221,7 +221,7 @@ public class HttpClientExample {
 ```
 public class SwitchExpressionExample {
 
-   public static void main(String\[] args) {
+   public static void main(String[] args) {
 
        int dayOfWeek = 3;
 
@@ -253,19 +253,19 @@ public class SwitchExpressionExample {
 ```
 public class TextBlockExample {
 
-   public static void main(String\[] args) {
+   public static void main(String[] args) {
 
        String html = """
 
-                     \<html>
+                     <html>
 
-                         \<body>
+                         <body>
 
-                             \<p>Hello, Java 13\</p>
+                            <p>Hello, Java 13</p>
 
-                         \</body>
+                        </body>
 
-                     \</html>
+                    </html>
 
                      """;
 
@@ -285,7 +285,7 @@ public class TextBlockExample {
 ```
 public class InstanceOfPatternMatchingExample {
 
-   public static void main(String\[] args) {
+   public static void main(String[] args) {
 
        Object obj = "Hello";
 
@@ -391,15 +391,15 @@ final class Rectangle extends Shape {
 
 public class SwitchPatternMatchingShapeExample {
 
-   public static void main(String\[] args) {
+   public static void main(String[] args) {
 
        Shape shape = new Circle(5.0);
 
        double area = switch (shape) {
 
-           case Circle c -> Math.PI \* c.getRadius() \* c.getRadius();
+           case Circle c -> Math.PI * c.getRadius() * c.getRadius();
 
-           case Rectangle r -> r.getWidth() \* r.getHeight();
+           case Rectangle r -> r.getWidth() * r.getHeight();
 
        };
 
@@ -437,7 +437,7 @@ import java.net.InetSocketAddress;
 
 public class SimpleWebServerExample {
 
-   public static void main(String\[] args) throws IOException {
+   public static void main(String[] args) throws IOException {
 
        HttpServer server = HttpServer.create(new InetSocketAddress(8000), 0);
 
@@ -491,7 +491,7 @@ public class SimpleWebServerExample {
 ```
 public class StringTemplateExample {
 
-   public static void main(String\[] args) {
+   public static void main(String[] args) {
 
        int num = 10;
 
