@@ -497,7 +497,7 @@ public class StringTemplateExample {
 
        String result = """
 
-                     The number is \${num}, and its square is \${num \* num}
+                     The number is ${num}, and its square is ${num * num}
 
                      """;
 

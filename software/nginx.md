@@ -43,7 +43,7 @@ sudo rpm -Uvh http://nginx.org/packages/centos/7/noarch/RPMS/nginx-release-cento
 
 # CentOS 8
 
-sudo dnf install -y https://nginx.org/packages/centos/8/x86\_64/RPMS/nginx-1.24.0-1.el8.ngx.x86\_64.rpm
+sudo dnf install -y https://nginx.org/packages/centos/8/x86_64/RPMS/nginx-1.24.0-1.el8.ngx.x86_64.rpm
 
 # 3. 安装Nginx
 
@@ -92,11 +92,11 @@ nginx -v
 
 1.  访问 Nginx 官方下载页（[https://nginx.org/en/download.html](https://nginx.org/en/download.html)），下载 Windows 版本压缩包（如`nginx-1.24.0.zip`）。
 
-2.  解压压缩包到指定目录（如`D:\nginx-1.24.0`），注意路径中不要包含中文或空格。
+2.  解压压缩包到指定目录（如`D:nginx-1.24.0`），注意路径中不要包含中文或空格。
 
 3.  启动 Nginx：
 
-- 打开命令提示符（CMD），切换到 Nginx 解压目录：`cd D:\nginx-1.24.0`。
+- 打开命令提示符（CMD），切换到 Nginx 解压目录：`cd D:nginx-1.24.0`。
 
 - 执行启动命令：`start nginx`（无明显输出，若进程中存在`nginx.exe`则启动成功）。
 
@@ -113,9 +113,9 @@ Nginx 的配置文件默认位于`/etc/nginx/`（Linux）或`Nginx解压目录/c
 
 user  nginx;  # Nginx运行用户（Linux下默认nginx，Windows下无需配置）
 
-worker\_processes  auto;  # 工作进程数，建议设置为CPU核心数（auto表示自动检测）
+worker_processes  auto;  # 工作进程数，建议设置为CPU核心数（auto表示自动检测）
 
-error\_log  /var/log/nginx/error.log warn;  # 错误日志路径及级别（warn/error/info/debug）
+error_log  /var/log/nginx/error.log warn;  # 错误日志路径及级别（warn/error/info/debug）
 
 pid        /var/run/nginx.pid;  # Nginx进程PID文件路径
 
@@ -123,7 +123,7 @@ pid        /var/run/nginx.pid;  # Nginx进程PID文件路径
 
 events {
 
-   worker\_connections  1024;  # 每个工作进程的最大连接数（默认1024，高并发场景可调整为10000+）
+   worker_connections  1024;  # 每个工作进程的最大连接数（默认1024，高并发场景可调整为10000+）
 
    use epoll;  # 网络I/O模型（Linux推荐epoll，Windows无需配置）
 
@@ -135,33 +135,33 @@ http {
 
    include       /etc/nginx/mime.types;  # 引入MIME类型映射文件（定义文件类型与HTTP响应头的对应关系）
 
-   default\_type  application/octet-stream;  # 默认MIME类型（未匹配时使用）
+   default_type  application/octet-stream;  # 默认MIME类型（未匹配时使用）
 
    # 日志格式配置（main为自定义格式名，可在虚拟主机中引用）
 
-   log\_format  main  '\$remote\_addr - \$remote\_user \[\$time\_local] "\$request" '
+   log_format  main  '$remote_addr - $remote_user [$time_local] "$request" '
 
-                     '\$status \$body\_bytes\_sent "\$http\_referer" '
+                     '$status $body_bytes_sent "$http_referer" '
 
-                     '"\$http\_user\_agent" "\$http\_x\_forwarded\_for"';
+                     '"$http_user_agent" "$http_x_forwarded_for"';
 
-   access\_log  /var/log/nginx/access.log  main;  # 访问日志路径及格式
+   access_log  /var/log/nginx/access.log  main;  # 访问日志路径及格式
 
    sendfile        on;  # 开启高效文件传输模式（减少CPU占用，推荐开启）
 
-   # tcp\_nopush     on;  # 配合sendfile使用，提升网络传输效率（可选开启）
+   # tcp_nopush     on;  # 配合sendfile使用，提升网络传输效率（可选开启）
 
-   keepalive\_timeout  65;  # 客户端连接超时时间（单位：秒）
+   keepalive_timeout  65;  # 客户端连接超时时间（单位：秒）
 
    # gzip压缩配置（开启后减小传输文件体积）
 
    gzip  on;  # 开启gzip压缩
 
-   gzip\_types text/plain text/css application/json application/javascript text/xml application/xml application/xml+rss;  # 需压缩的文件类型
+   gzip_types text/plain text/css application/json application/javascript text/xml application/xml application/xml+rss;  # 需压缩的文件类型
 
    # 引入虚拟主机配置文件（推荐将不同站点配置拆分到conf.d目录，便于管理）
 
-   include /etc/nginx/conf.d/\*.conf;
+   include /etc/nginx/conf.d/*.conf;
 
 }
 ```
@@ -179,7 +179,7 @@ server {
 
    listen       80;  # 监听端口（HTTP默认80，HTTPS默认443）
 
-   server\_name  static.example.com;  # 绑定的域名（可配置多个，用空格分隔）
+   server_name  static.example.com;  # 绑定的域名（可配置多个，用空格分隔）
 
    # 站点根目录（静态文件存放路径）
 
@@ -189,23 +189,23 @@ server {
 
    # 访问日志（引用HTTP块中定义的main格式）
 
-   access\_log  /var/log/nginx/static-access.log  main;
+   access_log  /var/log/nginx/static-access.log  main;
 
-   error\_log   /var/log/nginx/static-error.log  warn;
+   error_log   /var/log/nginx/static-error.log  warn;
 
    # 静态文件缓存配置（对图片、CSS、JS设置30天缓存）
 
-   location \~\* \\.(jpg|jpeg|png|gif|css|js)\$ {
+   location ~* .(jpg|jpeg|png|gif|css|js)$ {
 
        expires 30d;  # 缓存有效期30天
 
-       add\_header Cache-Control "public, max-age=2592000";  # 浏览器缓存控制头
+       add_header Cache-Control "public, max-age=2592000";  # 浏览器缓存控制头
 
    }
 
    # 404页面配置（当请求文件不存在时返回自定义404页面）
 
-   error\_page  404              /404.html;
+   error_page  404              /404.html;
 
    location = /404.html {
 
@@ -227,35 +227,35 @@ server {
 
    listen       80;
 
-   server\_name  api.example.com;
+   server_name  api.example.com;
 
-   access\_log  /var/log/nginx/api-access.log  main;
+   access_log  /var/log/nginx/api-access.log  main;
 
-   error\_log   /var/log/nginx/api-error.log  warn;
+   error_log   /var/log/nginx/api-error.log  warn;
 
    # 反向代理核心配置：将所有请求转发到后端服务
 
    location / {
 
-       proxy\_pass http://127.0.0.1:3000;  # 后端服务地址（IP:端口）
+       proxy_pass http://127.0.0.1:3000;  # 后端服务地址（IP:端口）
 
-       proxy\_set\_header Host \$host;  # 传递客户端请求的Host头到后端
+       proxy_set_header Host $host;  # 传递客户端请求的Host头到后端
 
-       proxy\_set\_header X-Real-IP \$remote\_addr;  # 传递客户端真实IP到后端
+       proxy_set_header X-Real-IP $remote_addr;  # 传递客户端真实IP到后端
 
-       proxy\_set\_header X-Forwarded-For \$proxy\_add\_x\_forwarded\_for;  # 传递代理链IP
+       proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;  # 传递代理链IP
 
-       proxy\_set\_header X-Forwarded-Proto \$scheme;  # 传递请求协议（http/https）
+       proxy_set_header X-Forwarded-Proto $scheme;  # 传递请求协议（http/https）
 
    }
 
    # 后端服务超时配置
 
-   proxy\_connect\_timeout 5s;  # 与后端建立连接的超时时间
+   proxy_connect_timeout 5s;  # 与后端建立连接的超时时间
 
-   proxy\_send\_timeout 10s;    # 发送请求到后端的超时时间
+   proxy_send_timeout 10s;    # 发送请求到后端的超时时间
 
-   proxy\_read\_timeout 10s;    # 读取后端响应的超时时间
+   proxy_read_timeout 10s;    # 读取后端响应的超时时间
 
 }
 ```
@@ -271,7 +271,7 @@ http {
 
    # 负载均衡集群：后端3个Tomcat服务
 
-   upstream tomcat\_cluster {
+   upstream tomcat_cluster {
 
        server 192.168.1.101:8080 weight=3;  # 权重3（接收30%请求）
 
@@ -293,19 +293,19 @@ http {
 
        listen       80;
 
-       server\_name  web.example.com;
+       server_name  web.example.com;
 
-       access\_log  /var/log/nginx/web-access.log  main;
+       access_log  /var/log/nginx/web-access.log  main;
 
-       error\_log   /var/log/nginx/web-error.log  warn;
+       error_log   /var/log/nginx/web-error.log  warn;
 
        location / {
 
-           proxy\_pass http://tomcat\_cluster;  # 代理到负载均衡集群（集群名与upstream一致）
+           proxy_pass http://tomcat_cluster;  # 代理到负载均衡集群（集群名与upstream一致）
 
-           proxy\_set\_header Host \$host;
+           proxy_set_header Host $host;
 
-           proxy\_set\_header X-Real-IP \$remote\_addr;
+           proxy_set_header X-Real-IP $remote_addr;
 
        }
 
@@ -323,25 +323,25 @@ server {
 
    listen       443 ssl;  # 监听HTTPS默认端口443，并开启SSL
 
-   server\_name  https.example.com;
+   server_name  https.example.com;
 
    # SSL证书路径（cert.pem为证书文件，privkey.pem为私钥文件）
 
-   ssl\_certificate     /etc/nginx/ssl/https.example.com/cert.pem;
+   ssl_certificate     /etc/nginx/ssl/https.example.com/cert.pem;
 
-   ssl\_certificate\_key /etc/nginx/ssl/https.example.com/privkey.pem;
+   ssl_certificate_key /etc/nginx/ssl/https.example.com/privkey.pem;
 
    # SSL优化配置
 
-   ssl\_protocols TLSv1.2 TLSv1.3;  # 支持的TLS协议版本（禁用不安全的SSLv3、TLSv1.0/1.1）
+   ssl_protocols TLSv1.2 TLSv1.3;  # 支持的TLS协议版本（禁用不安全的SSLv3、TLSv1.0/1.1）
 
-   ssl\_ciphers ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384;  # 加密套件
+   ssl_ciphers ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384;  # 加密套件
 
-   ssl\_prefer\_server\_ciphers on;  # 优先使用服务器定义的加密套件
+   ssl_prefer_server_ciphers on;  # 优先使用服务器定义的加密套件
 
-   ssl\_session\_cache shared:SSL:10m;  # SSL会话缓存（提升HTTPS连接速度）
+   ssl_session_cache shared:SSL:10m;  # SSL会话缓存（提升HTTPS连接速度）
 
-   ssl\_session\_timeout 10m;  # SSL会话超时时间
+   ssl_session_timeout 10m;  # SSL会话超时时间
 
    # 强制HTTP跳转HTTPS（可选：将80端口请求重定向到443端口）
 
@@ -351,9 +351,9 @@ server {
 
    #     listen 80;
 
-   #     server\_name https.example.com;
+   #     server_name https.example.com;
 
-   #     return 301 https://\$host\$request\_uri;  # 301永久重定向
+   #     return 301 https://$host$request_uri;  # 301永久重定向
 
    # }
 
@@ -409,7 +409,7 @@ nginx -t  # 输出 "nginx: configuration file /etc/nginx/nginx.conf test is succ
 
 nginx -v  # 简单版本（如 nginx version: nginx/1.24.0）
 
-nginx -V  # 详细版本（包含编译参数，如 --with-http\_ssl\_module）
+nginx -V  # 详细版本（包含编译参数，如 --with-http_ssl_module）
 
 # 强制停止Nginx（仅在 systemctl 无法停止时使用）
 
