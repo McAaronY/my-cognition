@@ -11,9 +11,8 @@
     ],
     "L": [
         {
-            "title": "简历CN",
+            "title": "简历 CN",
             "link": "/McAaronY/my-cognition/refs/heads/main/notes/resume-CN.md",
-            "createDate": "",
             "keywords": [],
             "createDate": "2025-08-17",
             "img": "/McAaronY/my-cognition/refs/heads/main/images/resume.jpeg"
@@ -21,7 +20,7 @@
     ],
     "T": [
         {
-            "title": "学习transformers是怎么回事",
+            "title": "transformers 是怎么回事",
             "link": "/githubraw/huggingface/transformers/refs/heads/main/i18n/README_zh-hans.md",
             "createDate": "2025-08-17",
             "keywords": [],
@@ -52,7 +51,7 @@
             "img": "/McAaronY/my-cognition/refs/heads/main/images/go.jpeg"
         },
         {
-            "title": "go gin docker构建本地环境",
+            "title": "go-gin-docker 构建本地环境",
             "link": "/McAaronY/my-cognition/refs/heads/main/software/go-gin-docker.md",
             "createDate": "2025-09-09",
             "keywords": [
@@ -106,6 +105,14 @@
         {
             "title": "yt-dlp",
             "link": "/McAaronY/my-cognition/refs/heads/main/software/yt-dlp.md",
+            "createDate": "2025-09-16",
+            "keywords": [],
+            "creator": "xiaoyang",
+            "img": "/McAaronY/my-cognition/refs/heads/main/images/yt-dlp.png"
+        },
+        {
+            "title": "flutter",
+            "link": "/McAaronY/my-cognition/refs/heads/main/software/flutter.md",
             "createDate": "2025-09-16",
             "keywords": [],
             "creator": "xiaoyang",
