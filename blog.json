@@ -230,7 +230,7 @@
         },
         {
             "title": "Tailwind CSS",
-            "link": "/githubraw/tailwindlabs/tailwindcss/refs/heads/master/README.md",
+            "link": "/githubraw/tailwindlabs/tailwindcss/blob/main/README.md",
             "createDate": "2020-01-01",
             "keywords": [
                 "原子化CSS",
@@ -308,7 +308,7 @@
         },
         {
             "title": "PrimeReact",
-            "link": "/githubraw/primefaces/primereact/refs/heads/main/README.md",
+            "link": "/githubraw/tailwindlabs/tailwindcss/refs/heads/main/README.md",
             "createDate": "2020-01-01",
             "keywords": [
                 "React",
