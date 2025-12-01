@@ -7,6 +7,10 @@
         {
             "type": "L",
             "title": "生活"
+        },
+        {
+            "type": "K",
+            "title": "优秀的开源项目"
         }
     ],
     "L": [
@@ -117,6 +121,203 @@
             "keywords": [],
             "creator": "xiaoyang",
             "img": "/McAaronY/my-cognition/refs/heads/main/images/yt-dlp.png"
+        }
+    ],
+    "K": [
+        {
+            "title": "Element Plus",
+            "link": "/githubraw/ElementPlus/element-plus/refs/heads/dev/README.md",
+            "createDate": "2020-01-01",
+            "keywords": [
+                "Vue 3",
+                "PC端UI",
+                "TypeScript",
+                "企业级组件库"
+            ],
+            "creator": "饿了么团队",
+            "img": "/images/ui/element-plus.png"
+        },
+        {
+            "title": "Ant Design",
+            "link": "/githubraw/ant-design/ant-design/refs/heads/master/README.md",
+            "createDate": "2020-01-01",
+            "keywords": [
+                "React",
+                "企业级",
+                "中后台UI",
+                "设计系统"
+            ],
+            "creator": "蚂蚁集团",
+            "img": "/images/ui/ant-design.png"
+        },
+        {
+            "title": "Naive UI",
+            "link": "/githubraw/TuSimple/naive-ui/refs/heads/main/README.md",
+            "createDate": "2021-01-01",
+            "keywords": [
+                "Vue 3",
+                "高性能",
+                "按需加载",
+                "暗黑模式"
+            ],
+            "creator": "社区维护",
+            "img": "/images/ui/naive-ui.png"
+        },
+        {
+            "title": "MUI (Material-UI)",
+            "link": "/githubraw/mui/material-ui/refs/heads/master/README.md",
+            "createDate": "2021-01-01",
+            "keywords": [
+                "React",
+                "Material Design",
+                "CSS-in-JS",
+                "组件生态"
+            ],
+            "creator": "MUI团队",
+            "img": "/images/ui/mui.png"
+        },
+        {
+            "title": "Vant",
+            "link": "/githubraw/youzan/vant/refs/heads/main/README.md",
+            "createDate": "2020-01-01",
+            "keywords": [
+                "Vue",
+                "移动端",
+                "电商组件",
+                "小程序适配"
+            ],
+            "creator": "有赞团队",
+            "img": "/images/ui/vant.png"
+        },
+        {
+            "title": "Taro UI",
+            "link": "/githubraw/NervJS/taro-ui/refs/heads/main/README.md",
+            "createDate": "2020-01-01",
+            "keywords": [
+                "Taro",
+                "跨端UI",
+                "React/Vue",
+                "小程序"
+            ],
+            "creator": "京东团队",
+            "img": "/images/ui/taro-ui.png"
+        },
+        {
+            "title": "React Native Paper",
+            "link": "/githubraw/callstack/react-native-paper/refs/heads/main/README.md",
+            "createDate": "2020-01-01",
+            "keywords": [
+                "React Native",
+                "Material Design",
+                "移动端",
+                "TypeScript"
+            ],
+            "creator": "社区维护",
+            "img": "/images/ui/react-native-paper.png"
+        },
+        {
+            "title": "Flutter Material",
+            "link": "/githubraw/flutter/flutter/refs/heads/master/packages/flutter/material/README.md",
+            "createDate": "2020-01-01",
+            "keywords": [
+                "Flutter",
+                "Dart",
+                "跨端",
+                "Material 3"
+            ],
+            "creator": "Google",
+            "img": "/images/ui/flutter-material.png"
+        },
+        {
+            "title": "Tailwind CSS",
+            "link": "/githubraw/tailwindlabs/tailwindcss/refs/heads/master/README.md",
+            "createDate": "2020-01-01",
+            "keywords": [
+                "原子化CSS",
+                "按需编译",
+                "自定义主题",
+                "前端工具"
+            ],
+            "creator": "Tailwind Labs",
+            "img": "/images/ui/tailwind-css.png"
+        },
+        {
+            "title": "Headless UI",
+            "link": "/githubraw/tailwindlabs/headlessui/refs/heads/main/README.md",
+            "createDate": "2020-01-01",
+            "keywords": [
+                "无样式组件",
+                "React/Vue",
+                "可访问性",
+                "Tailwind适配"
+            ],
+            "creator": "Tailwind Labs",
+            "img": "/images/ui/headless-ui.png"
+        },
+        {
+            "title": "Radix UI",
+            "link": "/githubraw/radix-ui/primitives/refs/heads/main/README.md",
+            "createDate": "2021-01-01",
+            "keywords": [
+                "Headless",
+                "React",
+                "高性能",
+                "可访问性"
+            ],
+            "creator": "Radix团队",
+            "img": "/images/ui/radix-ui.png"
+        },
+        {
+            "title": "Ant Design Pro Components",
+            "link": "/githubraw/ant-design/pro-components/refs/heads/master/README.md",
+            "createDate": "2020-01-01",
+            "keywords": [
+                "React",
+                "低代码",
+                "中后台高级组件",
+                "权限管理"
+            ],
+            "creator": "蚂蚁集团",
+            "img": "/images/ui/ant-design-pro-components.png"
+        },
+        {
+            "title": "ECharts",
+            "link": "/githubraw/apache/echarts/refs/heads/master/README.md",
+            "createDate": "2020-01-01",
+            "keywords": [
+                "可视化",
+                "图表库",
+                "Canvas/SVG",
+                "大数据渲染"
+            ],
+            "creator": "百度团队",
+            "img": "/images/ui/echarts.png"
+        },
+        {
+            "title": "ShadCN UI",
+            "link": "/githubraw/shadcn/ui/refs/heads/main/README.md",
+            "createDate": "2022-01-01",
+            "keywords": [
+                "复制即用",
+                "Radix UI",
+                "Tailwind CSS",
+                "多框架适配"
+            ],
+            "creator": "社区维护",
+            "img": "/images/ui/shadcn-ui.png"
+        },
+        {
+            "title": "PrimeReact",
+            "link": "/githubraw/primefaces/primereact/refs/heads/main/README.md",
+            "createDate": "2020-01-01",
+            "keywords": [
+                "React",
+                "全功能组件",
+                "多主题",
+                "SSR支持"
+            ],
+            "creator": "PrimeTek",
+            "img": "/images/ui/primereact.png"
         }
     ]
 }
