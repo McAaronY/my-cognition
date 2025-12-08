@@ -46,7 +46,7 @@ D --> E
 
 ## 带循环的流程
 
-```mermaid mermaid
+```mermaid
 flowchart TD
 A[开始] --> B[步骤 1]
 B --> C{继续循环?}
