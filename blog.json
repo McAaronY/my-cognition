@@ -121,6 +121,14 @@
             "keywords": [],
             "creator": "xiaoyang",
             "img": "/McAaronY/my-cognition/refs/heads/main/images/yt-dlp.png"
+        },
+        {
+            "title": "mermaid",
+            "link": "/McAaronY/my-cognition/refs/heads/main/software/mermaid.md",
+            "createDate": "2020-01-01",
+            "keywords": [],
+            "creator": "PrimeTek",
+            "img": "/images/ui/primereact.png"
         }
     ],
     "K": [
