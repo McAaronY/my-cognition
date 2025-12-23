@@ -1,146 +1,167 @@
 {
-    "side": [
-        {
-            "type": "T",
-            "title": "科技记录"
-        },
-        {
-            "type": "L",
-            "title": "生活"
-        },
-        {
-            "type": "A",
-            "title": "Test",
-            "index": 2,
-            "label": "AAA"
-        }
-    ],
-    "L": [
-        {
-            "title": "简历 CN",
-            "link": "/McAaronY/my-cognition/refs/heads/main/notes/resume-CN.md",
-            "keywords": [],
-            "createDate": "2025-08-17",
-            "img": "/McAaronY/my-cognition/refs/heads/main/images/resume.jpeg"
-        }
-    ],
-    "T": [
-        {
-            "title": "transformers 是怎么回事",
-            "link": "/githubraw/huggingface/transformers/refs/heads/main/i18n/README_zh-hans.md",
-            "createDate": "2025-08-17",
-            "keywords": [],
-            "creator": "来源网络",
-            "img": "/McAaronY/my-cognition/refs/heads/main/images/transform.jpeg"
-        },
-        {
-            "title": "Mackbook brew 使用",
-            "link": "/McAaronY/my-cognition/refs/heads/main/software/brew.md",
-            "createDate": "2025-08-17",
-            "keywords": [],
-            "img": "/McAaronY/my-cognition/refs/heads/main/images/brew.jpeg"
-        },
-        {
-            "title": "vim 使用",
-            "link": "/McAaronY/my-cognition/refs/heads/main/software/vim.md",
-            "createDate": "2025-08-17",
-            "keywords": [],
-            "creator": "xiaoyang",
-            "img": "/McAaronY/my-cognition/refs/heads/main/images/vim.jpeg"
-        },
-        {
-            "title": "go",
-            "link": "/McAaronY/my-cognition/refs/heads/main/software/go.md",
-            "createDate": "2025-08-26",
-            "keywords": [],
-            "creator": "xiaoyang",
-            "img": "/McAaronY/my-cognition/refs/heads/main/images/go.jpeg"
-        },
-        {
-            "title": "go-gin-docker 构建本地环境",
-            "link": "/McAaronY/my-cognition/refs/heads/main/software/go-gin-docker.md",
-            "createDate": "2025-09-09",
-            "keywords": [
-                "go",
-                "gin",
-                "docker"
-            ],
-            "creator": "xiaoyang",
-            "img": "/McAaronY/my-cognition/refs/heads/main/images/go.jpeg"
-        },
-        {
-            "title": "dockerfile 使用说明",
-            "link": "/McAaronY/my-cognition/refs/heads/main/software/dockerfile-desc.md",
-            "createDate": "2025-09-16",
-            "keywords": [],
-            "creator": "xiaoyang",
-            "img": "/McAaronY/my-cognition/refs/heads/main/images/docker.jpeg"
-        },
-        {
-            "title": "docker-compose 使用说明",
-            "link": "/McAaronY/my-cognition/refs/heads/main/software/docker-compose.md",
-            "createDate": "2025-09-16",
-            "keywords": [],
-            "creator": "xiaoyang",
-            "img": "/McAaronY/my-cognition/refs/heads/main/images/docker.jpeg"
-        },
-        {
-            "title": "java",
-            "link": "/McAaronY/my-cognition/refs/heads/main/software/java.md",
-            "createDate": "2025-09-16",
-            "keywords": [],
-            "creator": "xiaoyang",
-            "img": "/McAaronY/my-cognition/refs/heads/main/images/java.jpeg"
-        },
-        {
-            "title": "nginx",
-            "link": "/McAaronY/my-cognition/refs/heads/main/software/nginx.md",
-            "createDate": "2025-09-16",
-            "keywords": [],
-            "creator": "xiaoyang",
-            "img": "/McAaronY/my-cognition/refs/heads/main/images/nginx.jpeg"
-        },
-        {
-            "title": "webRTC",
-            "link": "/McAaronY/my-cognition/refs/heads/main/software/webRTC.md",
-            "createDate": "2025-09-16",
-            "keywords": [],
-            "creator": "xiaoyang",
-            "img": "/McAaronY/my-cognition/refs/heads/main/images/rtc.jpeg"
-        },
-        {
-            "title": "yt-dlp",
-            "link": "/McAaronY/my-cognition/refs/heads/main/software/yt-dlp.md",
-            "createDate": "2025-09-16",
-            "keywords": [],
-            "creator": "xiaoyang",
-            "img": "/McAaronY/my-cognition/refs/heads/main/images/yt-dlp.png"
-        },
-        {
-            "title": "flutter",
-            "link": "/McAaronY/my-cognition/refs/heads/main/software/flutter.md",
-            "createDate": "2025-09-16",
-            "keywords": [],
-            "creator": "xiaoyang",
-            "img": "/McAaronY/my-cognition/refs/heads/main/images/yt-dlp.png"
-        },
-        {
-            "title": "mermaid",
-            "link": "/McAaronY/my-cognition/refs/heads/main/software/mermaid.md",
-            "createDate": "2020-01-01",
-            "keywords": [],
-            "creator": "PrimeTek",
-            "img": "/images/ui/primereact.png"
-        }
-    ],
-    "A": [
-        {
-            "title": "hello world",
-            "createDate": "2025-12-23 13:35:58",
-            "link": "/McAaronY/my-cognition/refs/heads/main/hello/default.md",
-            "keywords": [],
-            "creator": "xiaoyang",
-            "uuid": "b3b9"
-        }
-    ]
+  "side": [
+    {
+      "type": "T",
+      "title": "科技记录"
+    },
+    {
+      "type": "L",
+      "title": "生活"
+    },
+    {
+      "type": "A",
+      "title": "Test",
+      "index": 2,
+      "label": "AAA"
+    }
+  ],
+  "L": [
+    {
+      "title": "简历 CN",
+      "link": "/McAaronY/my-cognition/refs/heads/main/notes/resume-CN.md",
+      "keywords": [],
+      "createDate": "2025-08-17",
+      "img": "/McAaronY/my-cognition/refs/heads/main/images/resume.jpeg"
+    }
+  ],
+  "T": [
+    {
+      "title": "transformers 是怎么回事",
+      "link": "/githubraw/huggingface/transformers/refs/heads/main/i18n/README_zh-hans.md",
+      "createDate": "2025-08-17",
+      "keywords": [],
+      "creator": "来源网络",
+      "img": "/McAaronY/my-cognition/refs/heads/main/images/transform.jpeg",
+      "uuid": "3631"
+    },
+    {
+      "title": "Mackbook brew 使用",
+      "link": "/McAaronY/my-cognition/refs/heads/main/software/brew.md",
+      "createDate": "2025-08-17",
+      "keywords": [],
+      "img": "/McAaronY/my-cognition/refs/heads/main/images/brew.jpeg",
+      "uuid": "439a"
+    },
+    {
+      "title": "vim 使用",
+      "link": "/McAaronY/my-cognition/refs/heads/main/software/vim.md",
+      "createDate": "2025-08-17",
+      "keywords": [],
+      "creator": "xiaoyang",
+      "img": "/McAaronY/my-cognition/refs/heads/main/images/vim.jpeg",
+      "uuid": "a3d7"
+    },
+    {
+      "title": "go",
+      "link": "/McAaronY/my-cognition/refs/heads/main/software/go.md",
+      "createDate": "2025-08-26",
+      "keywords": [],
+      "creator": "xiaoyang",
+      "img": "/McAaronY/my-cognition/refs/heads/main/images/go.jpeg",
+      "uuid": "1aa4"
+    },
+    {
+      "title": "go-gin-docker 构建本地环境",
+      "link": "/McAaronY/my-cognition/refs/heads/main/software/go-gin-docker.md",
+      "createDate": "2025-09-09",
+      "keywords": [
+        "go",
+        "gin",
+        "docker"
+      ],
+      "creator": "xiaoyang",
+      "img": "/McAaronY/my-cognition/refs/heads/main/images/go.jpeg",
+      "uuid": "d907"
+    },
+    {
+      "title": "dockerfile 使用说明",
+      "link": "/McAaronY/my-cognition/refs/heads/main/software/dockerfile-desc.md",
+      "createDate": "2025-09-16",
+      "keywords": [],
+      "creator": "xiaoyang",
+      "img": "/McAaronY/my-cognition/refs/heads/main/images/docker.jpeg",
+      "uuid": "eb0d"
+    },
+    {
+      "title": "docker-compose 使用说明",
+      "link": "/McAaronY/my-cognition/refs/heads/main/software/docker-compose.md",
+      "createDate": "2025-09-16",
+      "keywords": [],
+      "creator": "xiaoyang",
+      "img": "/McAaronY/my-cognition/refs/heads/main/images/docker.jpeg",
+      "uuid": "9015"
+    },
+    {
+      "title": "java",
+      "link": "/McAaronY/my-cognition/refs/heads/main/software/java.md",
+      "createDate": "2025-09-16",
+      "keywords": [],
+      "creator": "xiaoyang",
+      "img": "/McAaronY/my-cognition/refs/heads/main/images/java.jpeg",
+      "uuid": "8af0"
+    },
+    {
+      "title": "nginx",
+      "link": "/McAaronY/my-cognition/refs/heads/main/software/nginx.md",
+      "createDate": "2025-09-16",
+      "keywords": [],
+      "creator": "xiaoyang",
+      "img": "/McAaronY/my-cognition/refs/heads/main/images/nginx.jpeg",
+      "uuid": "7257"
+    },
+    {
+      "title": "webRTC",
+      "link": "/McAaronY/my-cognition/refs/heads/main/software/webRTC.md",
+      "createDate": "2025-09-16",
+      "keywords": [],
+      "creator": "xiaoyang",
+      "img": "/McAaronY/my-cognition/refs/heads/main/images/rtc.jpeg",
+      "uuid": "ca33"
+    },
+    {
+      "title": "yt-dlp",
+      "link": "/McAaronY/my-cognition/refs/heads/main/software/yt-dlp.md",
+      "createDate": "2025-09-16",
+      "keywords": [],
+      "creator": "xiaoyang",
+      "img": "/McAaronY/my-cognition/refs/heads/main/images/yt-dlp.png",
+      "uuid": "a948"
+    },
+    {
+      "title": "flutter",
+      "link": "/McAaronY/my-cognition/refs/heads/main/software/flutter.md",
+      "createDate": "2025-09-16",
+      "keywords": [],
+      "creator": "xiaoyang",
+      "img": "/McAaronY/my-cognition/refs/heads/main/images/yt-dlp.png",
+      "uuid": "3bf2"
+    },
+    {
+      "title": "mermaid",
+      "link": "/McAaronY/my-cognition/refs/heads/main/software/mermaid.md",
+      "createDate": "2020-01-01",
+      "keywords": [],
+      "creator": "PrimeTek",
+      "img": "/images/ui/primereact.png",
+      "uuid": "b67d"
+    },
+    {
+      "title": "spring java",
+      "createDate": "2025-12-23 23:28:48",
+      "link": "/McAaronY/my-cognition/refs/heads/main/software/java/spring.md",
+      "keywords": [],
+      "creator": "xiaoyang",
+      "uuid": "cf6c"
+    }
+  ],
+  "A": [
+    {
+      "title": "hello world",
+      "createDate": "2025-12-23 13:35:58",
+      "link": "/McAaronY/my-cognition/refs/heads/main/hello/default.md",
+      "keywords": [],
+      "creator": "xiaoyang",
+      "uuid": "b3b9"
+    }
+  ]
 }
