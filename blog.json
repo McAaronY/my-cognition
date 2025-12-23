@@ -137,7 +137,15 @@
     {
       "title": "hello world",
       "createDate": "2025-12-23 13:35:58",
-      "link": "/McAaronY/my-cognition/refs/heads/main/hello/default.md",
+      "link": "@hello/default.md",
+      "keywords": [],
+      "creator": "xiaoyang",
+      "uuid": "b3b9"
+    },
+    {
+      "title": "test2",
+      "createDate": "2025-12-23 18:48:16",
+      "link": "/McAaronY/my-cognition/refs/heads/main//hellohello.md",
       "keywords": [],
       "creator": "xiaoyang",
       "uuid": ""
