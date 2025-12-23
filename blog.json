@@ -10,7 +10,9 @@
     },
     {
       "type": "A",
-      "title": "AA"
+      "title": "AAA",
+      "index": 2,
+      "label": "AA"
     }
   ],
   "L": [
