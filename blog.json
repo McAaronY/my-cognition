@@ -145,7 +145,15 @@
     {
       "title": "test2",
       "createDate": "2025-12-23 18:48:16",
-      "link": "/McAaronY/my-cognition/refs/heads/main//hellohello.md",
+      "link": "@/hellohello.md",
+      "keywords": [],
+      "creator": "xiaoyang",
+      "uuid": "1b69"
+    },
+    {
+      "title": "test3",
+      "createDate": "2025-12-23 18:55:30",
+      "link": "/McAaronY/my-cognition/refs/heads/main//hello/123.md",
       "keywords": [],
       "creator": "xiaoyang",
       "uuid": ""
