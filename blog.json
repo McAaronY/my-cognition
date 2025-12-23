@@ -137,7 +137,7 @@
     {
       "title": "hello world",
       "createDate": "2025-12-23 13:35:58",
-      "link": "@hello/default.md",
+      "link": "/McAaronY/my-cognition/refs/heads/mainhello/default.md",
       "keywords": [],
       "creator": "xiaoyang",
       "uuid": "b3b9"
@@ -145,7 +145,7 @@
     {
       "title": "test2",
       "createDate": "2025-12-23 18:48:16",
-      "link": "@/hellohello.md",
+      "link": "/McAaronY/my-cognition/refs/heads/main/hellohello.md",
       "keywords": [],
       "creator": "xiaoyang",
       "uuid": "1b69"
@@ -154,6 +154,14 @@
       "title": "test3",
       "createDate": "2025-12-23 18:55:30",
       "link": "/McAaronY/my-cognition/refs/heads/main//hello/123.md",
+      "keywords": [],
+      "creator": "xiaoyang",
+      "uuid": "7f4c"
+    },
+    {
+      "title": "test4",
+      "createDate": "2025-12-23 18:56:25",
+      "link": "/McAaronY/my-cognition/refs/heads/main/hello/12.md",
       "keywords": [],
       "creator": "xiaoyang",
       "uuid": ""
