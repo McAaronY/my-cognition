@@ -46,7 +46,7 @@ git remote set
     brew cleanup
     ##  查看包的信息
     brew info
-    ## 卸载
+    ## 卸载程序
     brew uninstall 
 
 
