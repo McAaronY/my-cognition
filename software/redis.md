@@ -6,6 +6,7 @@
 ### 安装教程
 
 1. windows 
+
   1.1 下载地址 https://github.com/dmajkic/redis/downloads
 
   1.2 启动服务
